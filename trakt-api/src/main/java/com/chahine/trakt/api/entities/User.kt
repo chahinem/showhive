@@ -16,6 +16,6 @@ data class User(
     val location: String?,
     val about: String?,
     val gender: String?,
-    val age: Int = 0,
-    val images: Images?
+    val age: Int?,
+    val images: Images?,
 )

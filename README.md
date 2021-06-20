@@ -20,7 +20,7 @@ Light Theme                |  Dark Theme
 ## Cloning
 
 ```
-$ git clone git@github.com:chahine/showhive.git
+$> git clone git@github.com:chahine/showhive.git
 ```
 
 ## Required keys
@@ -62,24 +62,31 @@ RELEASE_KEY_PASSWORD   =
 ### Clean Build
 
 ```
-$ ./gradlew clean build
+$> ./gradlew clean build
 ```
 
 ### Release variant
 
 ```
-$ ./gradlew clean assembleRelease
+$> ./gradlew clean assembleRelease
 ```
 
-### Code analysis
+### Code analysis and tests
 
-TODO
+```
+$> ./gradlew spotlessCheck detekt
+$> ./gradlew testDebugUnitTest
+```
 
 # Android Specs
 
 ### Architecture
 
-TODO
+- Retrofit + OkHttp
+- Dagger Hilt
+- Jetpack ViewModel
+- AndroidX Paging
+- Kotlin Coroutines and Flow
 
 ### Continuous Integration
 

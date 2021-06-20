@@ -8,6 +8,7 @@ import com.chahine.trakt.api.entities.Comment
 import com.chahine.trakt.api.entities.Credits
 import com.chahine.trakt.api.entities.Extended
 import com.chahine.trakt.api.entities.Ratings
+import com.chahine.trakt.api.entities.Settings
 import com.chahine.trakt.api.entities.Show
 import com.chahine.trakt.api.entities.Stats
 import com.chahine.trakt.api.entities.Translation
@@ -303,6 +304,18 @@ interface TraktApi {
         @Query("limit") limit: Int?,
         @Query(value = "extended", encoded = true) extended: Extended,
     ): List<Show>
+
+    // endregion
+
+    // region Shows
+
+    /**
+     * Get the user's settings so you can align your app's experience with what they're used to on the trakt website.
+     * A globally unique uuid is also returned, which can be used to identify the user locally in your app if needed.
+     * However, the uuid can't be used to retrieve data from the Trakt API.
+     */
+    @GET("users/settings")
+    suspend fun settings(): Settings
 
     // endregion
 }

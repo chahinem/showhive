@@ -2,5 +2,6 @@
 <resources>
     <!-- Defaults -->
     <dimen name="spacing_xsmall">4dp</dimen>
+    <dimen name="spacing_small">8dp</dimen>
     <dimen name="spacing_standard">16dp</dimen>
 </resources>
